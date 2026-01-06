@@ -10,6 +10,8 @@ import TopBar from "components/BaseComponents/TopBar";
 import Layout from "components/BusinessComponents/Layout";
 import SummaryCards from "components/BusinessComponents/SummaryCards";
 import UserProfileDropDown from "components/BusinessComponents/UserProfileDropDown";
+import WalletsCard from "components/BusinessComponents/WalletsCard";
+import WorkingCapital from "components/BusinessComponents/WorkingCapital";
 
 export {
   Spinner,
@@ -24,4 +26,6 @@ export {
   Layout,
   SummaryCards,
   SummaryCard,
+  WorkingCapital,
+  WalletsCard,
 };

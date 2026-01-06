@@ -16,7 +16,9 @@ function NavbarItem(props: NavbarItemProps) {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const active = path === location.pathname;
+  const active =
+    path === location.pathname ||
+    (path === "/dashboard" && location.pathname === "/");
 
   const handleNavigatePath = () => {
     navigate(path);
