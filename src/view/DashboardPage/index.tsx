@@ -1,11 +1,13 @@
 import { Helmet } from "react-helmet-async";
 
+import { Layout } from "components";
+
 function DashboardPage() {
   return (
-    <div>
+    <Layout>
       <Helmet title="Fintech - Dashboard" />
-      dashboard
-    </div>
+      asdas
+    </Layout>
   );
 }
 

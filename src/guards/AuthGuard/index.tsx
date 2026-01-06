@@ -3,8 +3,7 @@ import { useEffect } from "react";
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import secureLocalStorage from "react-secure-storage";
 
-import { useAppContext } from "context/AppContext";
-
+import { useAppContext } from "context";
 import fintechCore from "core";
 
 function AuthGuard() {

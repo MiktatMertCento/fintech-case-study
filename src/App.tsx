@@ -3,10 +3,9 @@ import { HelmetProvider } from "react-helmet-async";
 import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 
-import { AppProvider } from "context/AppContext";
-
 import RegisterPage from "./view/AccountPages/RegisterPage";
 
+import { AppProvider } from "context";
 import fintechCore from "core";
 import { AuthGuard } from "guards";
 import { DashboardPage, LoginPage } from "view";

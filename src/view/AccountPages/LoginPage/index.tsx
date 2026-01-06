@@ -8,10 +8,9 @@ import { useNavigate } from "react-router-dom";
 import secureLocalStorage from "react-secure-storage";
 import * as yup from "yup";
 
-import { Button, GoogleLoginButton, TextField } from "components";
+import { Button, FintechLogo, GoogleLoginButton, TextField } from "components";
 
-import { useAppContext } from "context/AppContext";
-
+import { useAppContext } from "context";
 import { BaseError } from "core";
 import { useLogin } from "core/Queries/useUserQueries";
 import { LoginRequest } from "core/Queries/useUserQueries/interfaces";
@@ -81,21 +80,17 @@ function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-screen w-full bg-white">
+    <div className="flex min-h-screen w-full bg-ftBackground">
       <Helmet title="Fintech - Login" />
 
       <div className="relative flex w-full flex-col justify-center px-6 py-12 lg:w-1/2 lg:px-20 xl:px-32">
         <div className="mx-auto w-full max-w-md mt-16 lg:mt-0">
           <div className="absolute top-10">
-            <img
-                alt="Fintech Logo"
-                src="/images/Fintech.svg"
-                className="h-8 w-auto"
-            />
+            <FintechLogo className="h-8 w-auto" />
           </div>
 
-          <h1 className="text-4xl font-bold text-slate-900">Sign In</h1>
-          <p className="mt-3 text-lg text-slate-500">
+          <h1 className="text-4xl font-bold ">Sign In</h1>
+          <p className="mt-3 text-lg text-text3Color">
             Welcome back! Please enter your details
           </p>
 
@@ -113,6 +108,7 @@ function LoginPage() {
                   label="Email"
                   placeholder="example@gmail.com"
                   error={errors.email?.message}
+                  disabled={login.isPending}
                   {...field}
                 />
               )}
@@ -128,23 +124,24 @@ function LoginPage() {
                   label="Password"
                   placeholder="••••••••"
                   error={errors.password?.message}
+                  disabled={login.isPending}
                   {...field}
                 />
               )}
             />
 
             <div className="mt-2">
-              <Button label="Sign In" type="submit" />
+              <Button label="Sign In" type="submit" loading={login.isPending} />
             </div>
 
-            <GoogleLoginButton />
+            <GoogleLoginButton label="Sign in with google" />
           </form>
 
-          <p className="mt-8 text-center text-sm text-slate-500">
+          <p className="mt-8 text-center text-sm text-text2Color">
             Don&#39;t have an account?{" "}
             <a
               onClick={handleNavigateRegister}
-              className="font-bold text-slate-900 hover:underline relative inline-block cursor-pointer"
+              className="font-bold hover:underline relative inline-block cursor-pointer text-text1Color"
             >
               Sign up
               <img
@@ -157,7 +154,7 @@ function LoginPage() {
         </div>
       </div>
 
-      <div className="hidden lg:block lg:w-1/2 relative bg-gray-100 ">
+      <div className="hidden lg:block lg:w-1/2 relative bg-ftBackground">
         <img
           src="/images/Poster.png"
           alt="Cover"

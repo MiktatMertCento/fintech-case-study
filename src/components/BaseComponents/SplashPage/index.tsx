@@ -1,6 +1,8 @@
+import { FintechLogo } from "components";
+
 import { cn } from "lib/utils";
 
-function FallbackSpinner(props: { className?: string }) {
+function SplashPage(props: { className?: string }) {
   const { className } = props;
 
   return (
@@ -10,11 +12,7 @@ function FallbackSpinner(props: { className?: string }) {
         className,
       )}
     >
-      <img
-        alt="Fintech Logo"
-        src="/images/Fintech.svg"
-        className="min-w-1/2 md:min-w-1/4 max-w-2/3 mt-24"
-      />
+      <FintechLogo className="min-w-1/2 md:min-w-1/4 max-w-2/3 mt-24" />
 
       <img
         alt="Spinner"
@@ -25,4 +23,4 @@ function FallbackSpinner(props: { className?: string }) {
   );
 }
 
-export default FallbackSpinner;
+export default SplashPage;

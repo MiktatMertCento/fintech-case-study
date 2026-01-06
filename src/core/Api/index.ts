@@ -75,17 +75,12 @@ apiClient.interceptors.response.use(
       originalRequest._retry = true;
 
       try {
-        const accessToken = secureLocalStorage.getItem(
-          "accessToken",
-        ) as string;
+        const accessToken = secureLocalStorage.getItem("accessToken") as string;
         if (!accessToken) return;
 
-        const { data } = await axios.post(
-          `${BASE_URL}/users/refresh-token`,
-          {
-            accessToken: accessToken,
-          },
-        );
+        const { data } = await axios.post(`${BASE_URL}/users/refresh-token`, {
+          accessToken: accessToken,
+        });
 
         const newToken = data.data.accessToken as string;
         secureLocalStorage.setItem("accessToken", newToken);
