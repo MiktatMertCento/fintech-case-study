@@ -12,16 +12,16 @@ import TotalSavedIcon from "assets/icons/TotalSavedIcon";
 import TransactionsIcon from "assets/icons/TransactionsIcon";
 
 export {
-    DashboardIcon,
-    InvoicesIcon,
-    MyWalletsIcon,
-    SettingsIcon,
-    TransactionsIcon,
-    HelpIcon,
-    LogoutIcon,
-    NotificationIcon,
-    SearchIcon,
-    ThreePointIcon,
-    TotalBalanceIcon,
-    TotalSavedIcon
+  DashboardIcon,
+  InvoicesIcon,
+  MyWalletsIcon,
+  SettingsIcon,
+  TransactionsIcon,
+  HelpIcon,
+  LogoutIcon,
+  NotificationIcon,
+  SearchIcon,
+  ThreePointIcon,
+  TotalBalanceIcon,
+  TotalSavedIcon,
 };

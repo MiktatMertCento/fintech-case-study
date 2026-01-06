@@ -10,7 +10,6 @@ import {
 
 import fintechCore from "core/index";
 
-
 const endPoint = "/financial";
 
 export const useGetSummary = () =>

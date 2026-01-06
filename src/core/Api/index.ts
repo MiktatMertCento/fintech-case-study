@@ -70,8 +70,7 @@ apiClient.interceptors.response.use(
       _retry?: boolean;
     };
     const status = error.response?.status;
-
-    if (status === 403 && !originalRequest._retry) {
+    if (status === 401) {
       originalRequest._retry = true;
 
       try {

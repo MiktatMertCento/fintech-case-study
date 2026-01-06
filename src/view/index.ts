@@ -1,4 +1,5 @@
 import LoginPage from "view/AccountPages/LoginPage";
+import RegisterPage from "view/AccountPages/RegisterPage";
 import DashboardPage from "view/DashboardPage";
 import InvoicesPage from "view/InvoicesPage";
 import LogoutPage from "view/LogoutPage";
@@ -14,4 +15,5 @@ export {
   MyWalletsPage,
   SetttingsPage,
   TransactionsPage,
+  RegisterPage,
 };
