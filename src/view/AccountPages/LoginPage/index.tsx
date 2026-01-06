@@ -12,8 +12,8 @@ import { Button, FintechLogo, GoogleLoginButton, TextField } from "components";
 
 import { useAppContext } from "context";
 import { BaseError } from "core";
-import { useLogin } from "core/Queries/useUserQueries";
-import { LoginRequest } from "core/Queries/useUserQueries/interfaces";
+import { useLogin } from "core/Queries/UserQueries";
+import { LoginRequest } from "core/Queries/UserQueries/interfaces";
 
 const initialFormValues: LoginRequest = {
   email: "",

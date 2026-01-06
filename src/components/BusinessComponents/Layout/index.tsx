@@ -9,7 +9,7 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   return (
     <div className="flex min-h-screen w-full flex-row bg-white">
-      <aside className="flex w-64 shrink-0 flex-col bg-grayBackground pt-7 pb-28">
+      <aside className="flex w-64 shrink-0 flex-col bg-grayBackground pt-7 pb-24">
         <div className="pl-6">
           <FintechLogo className="w-28" />
         </div>

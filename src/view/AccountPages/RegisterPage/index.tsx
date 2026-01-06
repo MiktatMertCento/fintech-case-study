@@ -11,8 +11,8 @@ import { Button, FintechLogo, GoogleLoginButton, TextField } from "components";
 
 import { useAppContext } from "context";
 import { BaseError } from "core";
-import { useRegister } from "core/Queries/useUserQueries";
-import { RegisterRequest } from "core/Queries/useUserQueries/interfaces";
+import { useRegister } from "core/Queries/UserQueries";
+import { RegisterRequest } from "core/Queries/UserQueries/interfaces";
 
 const initialFormValues: RegisterRequest = {
   fullName: "",

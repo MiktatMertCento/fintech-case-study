@@ -12,8 +12,8 @@ import secureLocalStorage from "react-secure-storage";
 import { Spinner } from "components";
 
 import fintechCore from "core";
-import { useGetUserProfile } from "core/Queries/useUserQueries";
-import { User } from "core/Queries/useUserQueries/interfaces";
+import { useGetUserProfile } from "core/Queries/UserQueries";
+import { User } from "core/Queries/UserQueries/interfaces";
 
 type AppValuesType = {
   user?: User;
