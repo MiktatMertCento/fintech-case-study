@@ -8,6 +8,7 @@ import SummaryCard from "components/BaseComponents/SummaryCard";
 import TextField from "components/BaseComponents/TextField";
 import TopBar from "components/BaseComponents/TopBar";
 import Layout from "components/BusinessComponents/Layout";
+import RecentTransactions from "components/BusinessComponents/RecentTransactions";
 import SummaryCards from "components/BusinessComponents/SummaryCards";
 import UserProfileDropDown from "components/BusinessComponents/UserProfileDropDown";
 import WalletsCard from "components/BusinessComponents/WalletsCard";
@@ -28,4 +29,5 @@ export {
   SummaryCard,
   WorkingCapital,
   WalletsCard,
+  RecentTransactions,
 };

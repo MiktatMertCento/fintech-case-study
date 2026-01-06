@@ -1,6 +1,12 @@
 import { Helmet } from "react-helmet-async";
 
-import { Layout, SummaryCards, WalletsCard, WorkingCapital } from "components";
+import {
+  Layout,
+  RecentTransactions,
+  SummaryCards,
+  WalletsCard,
+  WorkingCapital,
+} from "components";
 
 function DashboardPage() {
   return (
@@ -14,9 +20,7 @@ function DashboardPage() {
 
         <WorkingCapital />
 
-        <div className="h-64 rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 md:col-span-2 lg:col-span-3 xl:col-span-6">
-          Tablo / Grafik 2
-        </div>
+        <RecentTransactions />
       </div>
     </Layout>
   );

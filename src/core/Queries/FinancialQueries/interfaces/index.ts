@@ -35,3 +35,43 @@ export interface WorkingCapitalResponse {
   data: MonthlyData[];
   summary: PeriodSummary;
 }
+
+export interface Card {
+  id: string;
+  name: string;
+  type: string;
+  cardNumber: string;
+  bank: string;
+  network: string;
+  expiryMonth: number;
+  expiryYear: number;
+  color: string;
+  isDefault: boolean;
+}
+
+export interface CardsResponse {
+  cards: Card[];
+}
+
+export interface Transaction {
+  id: string;
+  name: string;
+  business: string;
+  image: string;
+  type: string;
+  amount: number;
+  currency: string;
+  date: string;
+  status: "completed" | "pending" | "failed";
+}
+
+export interface TransactionSummary {
+  totalIncome: number;
+  totalExpense: number;
+  count: number;
+}
+
+export interface TransactionsResponse {
+  transactions: Transaction[];
+  summary: TransactionSummary;
+}

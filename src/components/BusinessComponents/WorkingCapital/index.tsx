@@ -38,12 +38,41 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 };
 
 function WorkingCapital() {
-  const workingCapitalQuery = useGetWorkingCapital();
-  const response = workingCapitalQuery.data;
+  const { data: response, isLoading } = useGetWorkingCapital();
   const chartData = response?.data || [];
 
+  if (isLoading) {
+    return (
+      <div className="flex h-96 flex-col rounded-xl border border-gray4Background bg-white px-6 py-3.5 md:col-span-2 lg:col-span-3 xl:col-span-6">
+        <div className="mb-6 flex items-center justify-between">
+          <div className="h-7 w-32 animate-pulse rounded-md bg-gray-200" />
+          <div className="flex gap-4">
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 animate-pulse rounded-full bg-gray-200" />
+              <div className="h-4 w-12 animate-pulse rounded bg-gray-200" />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="h-3 w-3 animate-pulse rounded-full bg-gray-200" />
+              <div className="h-4 w-12 animate-pulse rounded bg-gray-200" />
+            </div>
+          </div>
+        </div>
+        <div className="relative h-full w-full">
+          <div className="absolute inset-0 flex flex-col justify-between">
+            {[...Array(5)].map((_, i) => (
+              <div key={i} className="h-px w-full bg-gray-100" />
+            ))}
+          </div>
+          <div className="flex h-full w-full items-end gap-2 pb-6 pt-2">
+            <div className="h-full w-full animate-pulse rounded-lg bg-gray-50/50" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex h-96 flex-col rounded-xl border border-gray4Background bg-white px-6 py-3.5 md:col-span-2 lg:col-span-3 xl:col-span-6">
+    <div className="flex h-96 flex-col rounded-xl border border-gray4Background bg-white px-6 py-5 md:col-span-2 lg:col-span-3 xl:col-span-6">
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h2 className="text-xl font-bold text-text1Color">Working Capital</h2>
