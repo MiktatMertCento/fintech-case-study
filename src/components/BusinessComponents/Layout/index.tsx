@@ -9,7 +9,7 @@ import { FintechLogo, Navbar, TopBar } from "components";
 
 const lenisOptions: LenisOptions = {
   lerp: 0.1,
-  duration: 0.5,
+  duration: 1,
   smoothWheel: true,
 };
 

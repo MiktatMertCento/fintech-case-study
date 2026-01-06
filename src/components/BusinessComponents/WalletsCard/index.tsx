@@ -1,16 +1,27 @@
-import { useGetCards } from "core/Queries/FinancialQueries";
+import {ThreePointIcon} from "assets/icons";
+import {useGetCards} from "core/Queries/FinancialQueries";
 
 function WalletsCard() {
-  const { data: response } = useGetCards();
+    const {data: response, isLoading} = useGetCards();
 
-  return (
-    <div className="order-last h-full rounded-xl border-2 border-dashed border-blue-300 bg-blue-50 p-4 md:col-span-1 xl:order-0 xl:col-span-3">
-      <h3 className="mb-4 font-bold text-gray-700">Wallet</h3>
-      {(response?.cards ?? []).map((card) => (
-        <div key={card.cardNumber}>{card.cardNumber}</div>
-      ))}
-    </div>
-  );
+    if (isLoading || !response?.cards) {
+        return <div className="flex flex-col rounded-xl border border-gray4Background bg-white px-6 py-5"></div>;
+    }
+
+    return (
+        <div className="flex flex-col rounded-xl border border-gray4Background bg-white px-6 py-5">
+            <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-xl font-bold text-text1Color">Wallet</h3>
+                <button className="cursor-pointer text-secondaryColor transition-opacity hover:opacity-80">
+                    <ThreePointIcon/>
+                </button>
+            </div>
+
+            {
+                response.cards.map(card => <div key={card.cardNumber}>{card.cardNumber}</div>)
+            }
+        </div>
+    );
 }
 
 export default WalletsCard;

@@ -33,7 +33,7 @@ function RecentTransactions() {
   }
 
   return (
-    <div className="flex h-full flex-col rounded-xl border border-gray4Background bg-white px-6 py-5 md:col-span-2 lg:col-span-3 xl:col-span-6">
+    <div className="flex flex-col rounded-xl border border-gray4Background bg-white px-6 py-5 md:col-span-2 lg:col-span-3 xl:col-span-6">
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-xl font-bold text-text1Color">
           Recent Transaction
