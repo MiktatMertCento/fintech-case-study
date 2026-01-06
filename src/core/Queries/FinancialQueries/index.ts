@@ -2,12 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 
 import {
   CardsResponse,
+  ScheduledTransfersResponse,
   SummaryResponse,
   TransactionsResponse,
   WorkingCapitalResponse,
 } from "./interfaces";
 
 import fintechCore from "core/index";
+
 
 const endPoint = "/financial";
 
@@ -36,7 +38,7 @@ export const useGetCards = () =>
 
 export const useGetTransactions = (limit = 5) =>
   useQuery({
-    queryKey: ["transactions", limit],
+    queryKey: ["transactions", "recent", limit],
     queryFn: async (): Promise<TransactionsResponse> =>
       fintechCore.api
         .get(`${endPoint}/transactions/recent`, {
@@ -44,5 +46,14 @@ export const useGetTransactions = (limit = 5) =>
             limit,
           },
         })
+        .then((res) => res.data),
+  });
+
+export const useGetScheduledTransfers = () =>
+  useQuery({
+    queryKey: ["transfers", "scheduled"],
+    queryFn: async (): Promise<ScheduledTransfersResponse> =>
+      fintechCore.api
+        .get(`${endPoint}/transfers/scheduled`)
         .then((res) => res.data),
   });

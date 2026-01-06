@@ -14,7 +14,7 @@ export const formatCurrency = (amount = 0, currency = "TRY") => {
   }).format(amount);
 };
 
-export const formatDate = (dateString: string) => {
+export const formatDate = (dateString: string | Date) => {
   const date = new Date(dateString);
   return new Intl.DateTimeFormat(locale, {
     day: "2-digit",

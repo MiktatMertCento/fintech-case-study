@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import {
   Layout,
   RecentTransactions,
+  ScheduledTransfers,
   SummaryCards,
   WalletsCard,
   WorkingCapital,
@@ -19,6 +20,8 @@ function DashboardPage() {
         <WalletsCard />
 
         <WorkingCapital />
+
+        <ScheduledTransfers />
 
         <RecentTransactions />
       </div>

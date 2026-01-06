@@ -13,7 +13,7 @@ export interface SummaryResponse {
   totalBalance: FinancialDetail;
   totalExpense: FinancialDetail;
   totalSavings: FinancialDetail;
-  lastUpdated: string;
+  lastUpdated: Date;
 }
 
 export interface MonthlyData {
@@ -61,8 +61,8 @@ export interface Transaction {
   type: string;
   amount: number;
   currency: string;
-  date: string;
-  status: "completed" | "pending" | "failed";
+  date: Date;
+  status: string;
 }
 
 export interface TransactionSummary {
@@ -74,4 +74,24 @@ export interface TransactionSummary {
 export interface TransactionsResponse {
   transactions: Transaction[];
   summary: TransactionSummary;
+}
+
+export interface Transfer {
+  id: string;
+  name: string;
+  image: string;
+  date: Date;
+  amount: number;
+  currency: string;
+  status: string;
+}
+
+export interface TransferSummary {
+  totalScheduledAmount: number;
+  count: number;
+}
+
+export interface ScheduledTransfersResponse {
+  transfers: Transfer[];
+  summary: TransferSummary;
 }

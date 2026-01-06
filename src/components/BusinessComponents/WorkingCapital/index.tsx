@@ -8,34 +8,9 @@ import {
   YAxis,
 } from "recharts";
 
-import { useGetWorkingCapital } from "core/Queries/FinancialQueries";
-import { formatCurrency } from "lib/utils";
+import { CustomTooltip } from "components";
 
-const CustomTooltip = ({ active, payload, label }: any) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="rounded-lg bg-gray-800 p-3 shadow-xl ring-1 ring-gray-700">
-        <p className="mb-1 text-xs font-semibold text-gray-400">{label}</p>
-        {payload.map((entry: any, index: number) => (
-          <div
-            key={index}
-            className="flex items-center gap-2 text-sm font-medium text-white"
-          >
-            <div
-              className="h-2 w-2 rounded-full"
-              style={{ backgroundColor: entry.color }}
-            />
-            <div>
-              {entry.name === "income" ? "Gelir" : "Gider"}:{" "}
-              {formatCurrency(entry.value)}
-            </div>
-          </div>
-        ))}
-      </div>
-    );
-  }
-  return null;
-};
+import { useGetWorkingCapital } from "core/Queries/FinancialQueries";
 
 function WorkingCapital() {
   const { data: response, isLoading } = useGetWorkingCapital();
@@ -43,7 +18,7 @@ function WorkingCapital() {
 
   if (isLoading) {
     return (
-      <div className="flex h-96 flex-col rounded-xl border border-gray4Background bg-white px-6 py-3.5 md:col-span-2 lg:col-span-3 xl:col-span-6">
+      <div className="flex h-96 flex-col rounded-xl border border-gray4Background bg-white px-6 py-3.5 md:col-span-2 lg:col-span-3 xl:col-span-3">
         <div className="mb-6 flex items-center justify-between">
           <div className="h-7 w-32 animate-pulse rounded-md bg-gray-200" />
           <div className="flex gap-4">
