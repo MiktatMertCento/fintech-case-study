@@ -8,7 +8,7 @@ import RegisterPage from "./view/AccountPages/RegisterPage";
 import { AppProvider } from "context";
 import fintechCore from "core";
 import { AuthGuard } from "guards";
-import { DashboardPage, LoginPage } from "view";
+import { DashboardPage, LoginPage, LogoutPage } from "view";
 
 function App() {
   return (
@@ -22,8 +22,14 @@ function App() {
             <Route path="/register" element={<RegisterPage />} />
 
             <Route element={<AuthGuard />}>
-              <Route path="/" element={<DashboardPage />} />
-              <Route path="/dashboard" element={<DashboardPage />} />
+                <Route path="/" element={<DashboardPage />} />
+                <Route path="/dashboard" element={<DashboardPage />} />
+                <Route path="/transactions" element={<DashboardPage />} />
+                <Route path="/invoices" element={<DashboardPage />} />
+                <Route path="/my-wallets" element={<DashboardPage />} />
+                <Route path="/settings" element={<DashboardPage />} />
+                <Route path="/help" element={<DashboardPage />} />
+                <Route path="/logout" element={<LogoutPage />} />
             </Route>
           </Routes>
         </AppProvider>

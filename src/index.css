@@ -4,6 +4,10 @@
 @theme {
   --color-ftBackground: #ffffff;
   --color-grayBackground: #fafafa;
+  --color-gray2Background: #f8f8f8;
+  --color-gray3Background: #ebe8e8;
+  --color-darkGray1Background: #363a3f;
+  --color-darkGray2Background: #4e5257;
   --color-primaryColor: #c8ee44;
   --color-text1Color: #1b212d;
   --color-text2Color: #929eae;

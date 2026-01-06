@@ -55,6 +55,7 @@ function AppProvider({ children }: Props) {
   }, [apiUser.data, apiUser.isLoading, userToken]);
 
   const clearUser = () => {
+    setUser(undefined);
     secureLocalStorage.removeItem("accessToken");
     fintechCore.queryClient.clear();
   };

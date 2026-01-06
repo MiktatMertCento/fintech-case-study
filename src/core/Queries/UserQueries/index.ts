@@ -9,12 +9,7 @@ import {
 } from "./interfaces";
 
 import fintechCore from "core";
-
-interface ApiResponse<T> {
-  success: boolean;
-  message: string;
-  data: T;
-}
+import { ApiResponse } from "lib/generalInterfaces";
 
 const endPoint = "/users";
 
@@ -32,6 +27,12 @@ export const useLogin = () =>
       credentials: LoginRequest,
     ): Promise<ApiResponse<LoginResponse>> =>
       fintechCore.api.post(`${endPoint}/login`, credentials),
+  });
+
+export const useLogout = () =>
+  useMutation({
+    mutationFn: async (): Promise<ApiResponse<void>> =>
+      fintechCore.api.post(`${endPoint}/logout`),
   });
 
 export const useGetUserProfile = (hasUserToken: boolean) =>

@@ -1,29 +1,64 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import { cn } from "lib/utils";
 
 interface NavbarItemProps {
   title: string;
-  active: boolean;
+  path: string;
   Icon: React.ElementType;
 }
 
 function NavbarItem(props: NavbarItemProps) {
-  const { Icon, title, active } = props;
+  const { Icon, title, path } = props;
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const active = path === location.pathname;
+
+  const handleNavigatePath = () => {
+    navigate(path);
+  };
 
   return (
-    <div
+    <button
       className={cn(
-        "flex flex-row items-center gap-3 pl-4 py-3.5 rounded-lg font-medium cursor-pointer text-text2Color",
-        active && "bg-primaryColor font-semibold text-text1Color",
+        "group relative flex w-full flex-row items-center gap-3 rounded-lg pl-4 py-3.5 font-medium cursor-pointer transition-colors",
+        active
+          ? "text-text1Color font-semibold"
+          : "text-text2Color hover:text-text3Color",
       )}
+      onClick={handleNavigatePath}
     >
-      <Icon
-        className={cn("w-5 h-5 text-gray-400", active && "text-text1Color")}
-      />
+      {active && (
+        <motion.div
+          layoutId="active-nav-background"
+          className="absolute inset-0 rounded-lg bg-primaryColor"
+          initial={false}
+          transition={{
+            type: "spring",
+            stiffness: 500,
+            damping: 30,
+            mass: 0.5,
+          }}
+        />
+      )}
 
-      <h1 className="select-none">{title}</h1>
-    </div>
+      <div className="relative z-10 flex items-center gap-3">
+        <Icon
+          className={cn(
+            "w-5 h-5 transition-colors",
+            active
+              ? "text-text1Color"
+              : "text-text2Color group-hover:text-text3Color",
+          )}
+        />
+
+        <h1 className="select-none">{title}</h1>
+      </div>
+    </button>
   );
 }
 
