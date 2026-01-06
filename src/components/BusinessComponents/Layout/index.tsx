@@ -21,7 +21,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <ReactLenis root options={lenisOptions}>
       <div className="flex min-h-screen w-full flex-col bg-white lg:flex-row">
-        <aside className="flex w-full shrink-0 flex-col bg-grayBackground pt-7 pb-8 lg:h-auto lg:w-64 lg:pb-24">
+        <aside className="flex w-full shrink-0 flex-col bg-grayBackground pt-7 pb-8 lg:h-screen lg:w-64 lg:pb-24">
           <div className="pl-6">
             <FintechLogo className="w-28" />
           </div>
