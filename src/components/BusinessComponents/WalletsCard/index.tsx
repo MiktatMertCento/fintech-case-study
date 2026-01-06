@@ -14,7 +14,7 @@ function WalletsCard() {
     }
 
     return (
-        <div className="flex flex-col rounded-xl border border-gray4Background bg-white p-6 shadow-sm">
+        <div className="flex flex-col rounded-xl border border-gray4Background bg-white p-6">
             <div className="mb-6 flex items-center justify-between">
                 <h3 className="text-xl font-bold text-text1Color">Wallet</h3>
                 <button className="cursor-pointer text-text3Color transition-opacity hover:opacity-80">
