@@ -1,4 +1,5 @@
 import Button from "components/BaseComponents/Button";
+import CreditCardItem from "components/BaseComponents/CreditCardItem";
 import CustomTooltip from "components/BaseComponents/CustomTooltip";
 import FintechLogo from "components/BaseComponents/FintechLogo";
 import GoogleLoginButton from "components/BaseComponents/GoogleLoginButton";
@@ -17,21 +18,22 @@ import WalletsCard from "components/BusinessComponents/WalletsCard";
 import WorkingCapital from "components/BusinessComponents/WorkingCapital";
 
 export {
-  Spinner,
-  Button,
-  GoogleLoginButton,
-  TextField,
-  FintechLogo,
-  Navbar,
-  NavbarItem,
-  TopBar,
-  UserProfileDropDown,
-  Layout,
-  SummaryCards,
-  SummaryCard,
-  WorkingCapital,
-  WalletsCard,
-  RecentTransactions,
-  ScheduledTransfers,
-  CustomTooltip,
+    Spinner,
+    Button,
+    GoogleLoginButton,
+    TextField,
+    FintechLogo,
+    Navbar,
+    NavbarItem,
+    TopBar,
+    UserProfileDropDown,
+    Layout,
+    SummaryCards,
+    SummaryCard,
+    WorkingCapital,
+    WalletsCard,
+    RecentTransactions,
+    ScheduledTransfers,
+    CustomTooltip,
+    CreditCardItem,
 };

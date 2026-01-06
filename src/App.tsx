@@ -29,16 +29,17 @@ function App() {
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegisterPage />} />
 
-            {/* TODO: BURAYI DÜZELTMEDEN Bİ KEZ DAHA COMMİT ATMA */}
-            <Route path="/" element={<DashboardPage />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/transactions" element={<TransactionsPage />} />
-            <Route path="/invoices" element={<InvoicesPage />} />
-            <Route path="/my-wallets" element={<MyWalletsPage />} />
-            <Route path="/settings" element={<SetttingsPage />} />
-            <Route path="/help" element={<DashboardPage />} />
-            <Route path="/logout" element={<LogoutPage />} />
-            <Route element={<AuthGuard />}></Route>
+
+            <Route element={<AuthGuard />}>
+                <Route path="/" element={<DashboardPage />} />
+                <Route path="/dashboard" element={<DashboardPage />} />
+                <Route path="/transactions" element={<TransactionsPage />} />
+                <Route path="/invoices" element={<InvoicesPage />} />
+                <Route path="/my-wallets" element={<MyWalletsPage />} />
+                <Route path="/settings" element={<SetttingsPage />} />
+                <Route path="/help" element={<DashboardPage />} />
+                <Route path="/logout" element={<LogoutPage />} />
+            </Route>
           </Routes>
         </AppProvider>
       </HelmetProvider>
