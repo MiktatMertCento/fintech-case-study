@@ -1,7 +1,9 @@
+import CloseIcon from "assets/icons/CloseIcon";
 import DashboardIcon from "assets/icons/DashboardIcon";
 import HelpIcon from "assets/icons/HelpIcon";
 import InvoicesIcon from "assets/icons/InvoicesIcon";
 import LogoutIcon from "assets/icons/LogoutIcon";
+import MenuIcon from "assets/icons/MenuIcon";
 import MyWalletsIcon from "assets/icons/MyWalletsIcon";
 import NotificationIcon from "assets/icons/NotificationIcon";
 import SearchIcon from "assets/icons/SearchIcon";
@@ -24,4 +26,6 @@ export {
   ThreePointIcon,
   TotalBalanceIcon,
   TotalSavedIcon,
+  MenuIcon,
+  CloseIcon,
 };

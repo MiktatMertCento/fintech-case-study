@@ -14,7 +14,7 @@ function UserProfileDropDown() {
 
       <h1 className="font-semibold ml-3">{user?.fullName}</h1>
 
-      <DropdownIcon className="w-3 h-3 ml-7" />
+      <DropdownIcon className="w-3 h-3 ml-2 md:ml-7" />
     </div>
   );
 }
