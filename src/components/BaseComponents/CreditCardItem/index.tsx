@@ -77,7 +77,7 @@ function CreditCardItem({ card, index }: { card: Card; index: number }) {
             className={clsx(
               "font-mono font-black tracking-widest whitespace-nowrap",
               isFirst
-                ? "text-lg sm:text-xl md:text-lg 2xl:text-2xl"
+                ? "text-md xs:text-lg sm:text-xl md:text-lg 2xl:text-2xl"
                 : "text-lg 2xl:text-[22px] mb-2 text-text1Color",
             )}
           >

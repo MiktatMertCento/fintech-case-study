@@ -16,6 +16,7 @@
   --color-text3Color: #78778b;
   --color-text4Color: #626260;
   --default-font-family: "Kumbh Sans", sans-serif;
+  --breakpoint-3xl: 125rem; /* 2000px */
 }
 
 :root {
