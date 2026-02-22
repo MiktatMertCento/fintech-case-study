@@ -1,5 +1,1 @@
-![Dashboard Screen](https://fintech.miktatmert.dev/images/dashboard_screen.png)
-
-![Login Screen](https://fintech.miktatmert.dev/images/login_screen.png)
-
-![Register Screen](https://fintech.miktatmert.dev/images/register_screen.png)
+![Dashboard Screen]([https://fintech.miktatmert.dev/images/dashboard_screen.png](https://github.com/MiktatMertCento/fintech-case-study/blob/master/public/images/dashboard_screen.png))
