@@ -12,7 +12,7 @@ import {
 function DashboardPage() {
   return (
       <Layout>
-        <Helmet title="Fintech - Dashboard +" />
+        <Helmet title="Fintech - Dashboard" />
 
         <div className="grid grid-cols-1 gap-4 xl:grid-cols-9 xl:gap-6">
           <div className="flex flex-col gap-4 xl:col-span-6 3xl:col-span-7 xl:gap-6">
